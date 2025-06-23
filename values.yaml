@@ -73,12 +73,9 @@ ingress:
     {}
     # vhost: uptime-kuma.company.corp
   annotations:
-    nginx.ingress.kubernetes.io/proxy-body-size: "10m"
     nginx.ingress.kubernetes.io/proxy-read-timeout: "3600"
     nginx.ingress.kubernetes.io/proxy-send-timeout: "3600"
-    nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
-    nginx.ingress.kubernetes.io/server-snippets: |
-      more_set_input_headers "X-Forwarded-Proto: https";
+    nginx.ingress.kubernetes.io/x-forwarded-proto: "https
       location / {
         proxy_set_header Upgrade $http_upgrade;
         proxy_http_version 1.1;
