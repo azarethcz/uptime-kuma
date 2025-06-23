@@ -149,7 +149,7 @@ readinessProbe:
     scheme: HTTP
     httpHeaders: []
 
-volume:
+persistence:
   enabled: true
   accessMode: ReadWriteOnce
   size: 4Gi
@@ -183,12 +183,12 @@ strategy:
 # Mariadb configurations
 mariadb:
   enabled: false
-  architecture: standalone
-  auth:
-    database: uptime_kuma
-    username: uptime_kuma
-    password: ""
-    rootPassword: ""
+#  architecture: standalone
+#  auth:
+#    database: uptime_kuma
+#    username: uptime_kuma
+#    password: ""
+#    rootPassword: ""
 
 # Prometheus ServiceMonitor configuration
 serviceMonitor:
