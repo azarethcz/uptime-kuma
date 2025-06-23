@@ -246,7 +246,9 @@ networkPolicy:
   #    role: frontend
   #  matchExpressions:
   #   - {key: role, operator: In, values: [frontend]}
-
+extraEnvVars:
+  - name: UPTIME_KUMA_DISABLE_FRAME_SAMEORIGIN
+    value: "true"
 #extraInitContainers:
 #  - name: fix-permissions
 #    image: busybox:1.35
