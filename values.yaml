@@ -68,7 +68,7 @@ service:
 
 ingress:
   enabled: true
-   className: "nginx"
+    className: "nginx"
   extraLabels:
     {}
     # vhost: uptime-kuma.company.corp
