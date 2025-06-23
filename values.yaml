@@ -151,9 +151,9 @@ readinessProbe:
 
 persistence:
   enabled: true
+  storageClassName: nfs-client
   accessMode: ReadWriteOnce
   size: 4Gi
-  storageClassName: nfs-client
   # If you want to use a storage class other than the default, uncomment this
   # line and define the storage class name
   # storageClassName:
