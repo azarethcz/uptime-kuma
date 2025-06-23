@@ -15,5 +15,5 @@ sources:
 #    version: 20.2.2
 #    repository: https://charts.bitnami.com/bitnami
 #    condition: mariadb.enabled
-#type: application
+type: application
 version: 2.21.3
