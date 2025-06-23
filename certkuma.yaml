@@ -1,0 +1,17 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: uptime-svpojistovna-tls
+  namespace: kuma-monitoring
+spec:
+  secretName: uptime-svpojistovna-tls
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: uptime.svpojistovna.dev
+  dnsNames:
+    - uptime.svpojistovna.dev
+  usages:
+    - digital signature
+    - key encipherment
+  renewBefore: 360h
